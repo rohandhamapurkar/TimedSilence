@@ -25,20 +25,18 @@ class RingerRestorationWorker(
                 audioManager.ringerMode = originalMode
                 
                 if (originalVolume != -1) {
-                    Log.d("RingerRestorationWorker", "Restoring ringer volume to $originalVolume")
-                    audioManager.setStreamVolume(
-                        AudioManager.STREAM_RING,
-                        originalVolume,
-                        0
-                    )
+                    audioManager.setStreamVolume(AudioManager.STREAM_RING, originalVolume, 0)
                 }
+
+                // Dismiss the ongoing notification
+                notificationManager.cancel(1001) // Matches NOTIFICATION_ID in ViewModel
+                
                 androidx.work.ListenableWorker.Result.success()
             } else {
-                Log.e("RingerRestorationWorker", "Notification policy access NOT granted")
                 androidx.work.ListenableWorker.Result.failure()
             }
         } catch (e: Exception) {
-            Log.e("RingerRestorationWorker", "Error restoring ringer mode", e)
+            Log.e("RingerRestorationWorker", "Error restoring ringer", e)
             androidx.work.ListenableWorker.Result.retry()
         }
     }

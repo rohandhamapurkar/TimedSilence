@@ -26,7 +26,6 @@ TimedSilence is a personal utility app designed to temporarily silence an Androi
 
 ### Task_1_Core_Infrastructure_and_Permissions: Implement Notification Policy Access (DND) request logic and setup WorkManager for ringer restoration. Add the WorkManager dependency to the project configurations.
 - **Status:** COMPLETED
-- **Updates:** - Added WorkManager dependency (v2.11.2) to libs.versions.toml and app/build.gradle.kts.
 - **Acceptance Criteria:**
   - DND permission request logic implemented
   - WorkManager dependency added to libs.versions.toml and build.gradle.kts
@@ -34,7 +33,6 @@ TimedSilence is a personal utility app designed to temporarily silence an Androi
 
 ### Task_2_Compose_UI_and_Feature_Integration: Create the Material 3 user interface using Jetpack Compose. Implement duration input, ringer state capture logic, and the mechanism to trigger silencing and schedule restoration.
 - **Status:** COMPLETED
-- **Updates:** - Implemented Material 3 UI with Jetpack Compose, featuring an OutlinedTextField for duration and a 'Start Silence' button.
 - **Acceptance Criteria:**
   - Material 3 UI for duration input and starting silence implemented
   - Logic to capture and store current ringer mode before silencing is functional
@@ -42,7 +40,6 @@ TimedSilence is a personal utility app designed to temporarily silence an Androi
 
 ### Task_3_Visual_Polish_and_Assets: Implement Full Edge-to-Edge display support, refine the Material 3 theme with a vibrant color scheme using Material Color Utilities, and create an adaptive app icon.
 - **Status:** COMPLETED
-- **Updates:** - Verified enableEdgeToEdge() in MainActivity and used WindowInsets.safeDrawing in the Scaffold to ensure the UI respects system bars.
 - **Acceptance Criteria:**
   - Edge-to-Edge display is enabled and functional
   - Vibrant Material 3 theme applied
@@ -50,19 +47,27 @@ TimedSilence is a personal utility app designed to temporarily silence an Androi
 
 ### Task_4_Run_and_Verify: Perform a final build and run of the application to verify all features. Ensure the ringer is silenced and restored correctly and that the app follows all UI guidelines.
 - **Status:** COMPLETED
-- **Updates:** - Conducted a thorough code and resource audit as a physical device was not available.
-- Verified successful project build and dependency configuration (WorkManager, Material 3, KSP).
-- Confirmed implementation of enableEdgeToEdge() and usage of WindowInsets.safeDrawing for system bar awareness.
-- Validated the vibrant Material 3 theme implementation with the #7B3DFF seed color.
-- Verified ringer state capture logic in MainViewModel and restoration logic in RingerRestorationWorker.
-- Confirmed correct declaration of ACCESS_NOTIFICATION_POLICY and MODIFY_AUDIO_SETTINGS permissions.
-- Inspected adaptive app icon resources for correct foreground and background implementation.
-- All code-based acceptance criteria met.
 - **Acceptance Criteria:**
   - Application stability verified (no crashes)
   - Ringer restoration works as intended
   - Build pass
   - App does not crash
   - All existing tests pass
-- **Duration:** N/A
+
+### Task_5_Add_Unit_and_UI_Tests: Implement comprehensive unit tests for MainViewModel and UI tests for MainActivity components.
+- **Status:** COMPLETED
+- **Acceptance Criteria:**
+  - Unit tests for MainViewModel implemented and passing
+  - UI tests for MainActivity implemented and passing
+  - Test dependencies added to build configurations
+
+### Task_6_Feature_Refinement_and_Logic_Verification: Re-implement Vibrate default, smooth scrolling, continuous notification, and persistence. Add comprehensive tests to verify the logic.
+- **Status:** IN_PROGRESS
+- **Acceptance Criteria:**
+  - Vibrate mode is the default.
+  - Minute picker scroll is smooth and performant.
+  - Ongoing notification shows end time (rounded to minutes).
+  - Ringer state persists across process death.
+  - Unit tests verify capture, silence, and restoration logic.
+  - UI tests verify component presence and state transitions.
 
