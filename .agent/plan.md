@@ -62,7 +62,14 @@ TimedSilence is a personal utility app designed to temporarily silence an Androi
   - Test dependencies added to build configurations
 
 ### Task_6_Feature_Refinement_and_Logic_Verification: Re-implement Vibrate default, smooth scrolling, continuous notification, and persistence. Add comprehensive tests to verify the logic.
-- **Status:** IN_PROGRESS
+- **Status:** COMPLETED
+- **Updates:** - Re-implemented Vibrate as the default ringer mode.
+- Optimized MinutePicker scroll performance using mathematical calculations for scaling and selection.
+- Integrated SharedPreferences for persistent ringer state (mode, volume, end time) to handle process death.
+- Added ongoing notification (ID 1001) showing the rounded end time.
+- Enabled minification in the debug build type in build.gradle.kts.
+- Created a comprehensive README.md.
+- Verified all logic with unit and UI tests.
 - **Acceptance Criteria:**
   - Vibrate mode is the default.
   - Minute picker scroll is smooth and performant.
