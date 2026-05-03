@@ -1,0 +1,35 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Outer Timer Ring (Safe zone is 66x66 centered at 54,54) -->
+    <path
+        android:pathData="M54,28 A26,26 0 1 1 53.99,28"
+        android:strokeWidth="4"
+        android:strokeColor="#FFFFFF"
+        android:fillColor="#00000000" />
+
+    <!-- Timer Hand -->
+    <path
+        android:pathData="M54,32 L54,54 L66,54"
+        android:strokeWidth="4"
+        android:strokeColor="#FFFFFF"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillColor="#00000000" />
+
+    <!-- Silenced Speaker Icon -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M42,46 L36,46 L36,62 L42,62 L50,70 L50,38 L42,46 Z" />
+
+    <!-- Mute Slash -->
+    <path
+        android:pathData="M34,34 L74,74"
+        android:strokeWidth="4"
+        android:strokeColor="#FFFFFF"
+        android:strokeLineCap="round" />
+
+</vector>
